@@ -1,4 +1,7 @@
 Programalam Dilleri Dönem Projesi
 =======
 
-Rasgele Proje İsmi Üretimi-Swift Programlama Dili
+Swift Programlama Dili ile
+
+-Rasgele Proje İsmi Üretimi
+-Alt Tireden Boşluğa Dizgi Dönüşümü
