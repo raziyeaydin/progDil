@@ -20,13 +20,12 @@ func temizle ( str: String ) -> String {
         }
     }
   
-    while ( stop <= leng ) {
-        if ( dizi[ stop ] != "_" ) {
-            break
-        }
-        else {
-            dizi[ stop ] = dizi[ stop ]
+    while ( stop <= leng ){
+        if ( dizi[ stop ] == "_" ){
             --stop
+        }
+        else{
+            break
         }
     }
   
