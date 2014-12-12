@@ -11,26 +11,25 @@ func temizle ( str: String ) -> String {
     var start = 0, stop = leng
   
     while ( start < leng ) {
-        if ( dizi[ start ] != "_" ) {
-            break
+        if ( dizi[ start ] == "_" ) {
+            ++start
         }
         else {
-            dizi[ start ] = dizi[ start ]
-            ++start
+            break
         }
     }
   
-    while ( stop <= leng ){
-        if ( dizi[ stop ] == "_" ){
+    while ( stop <= leng ) {
+        if ( dizi[ stop ] == "_" ) {
             --stop
         }
-        else{
+        else {
             break
         }
     }
   
     for ( var i = start ; i <= stop ; ++i) {
-        if( dizi[ i ] == "_"){
+        if( dizi[ i ] == "_") {
             dizi[ i ] = " "
         }
     }
