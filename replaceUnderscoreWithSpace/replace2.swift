@@ -1,17 +1,17 @@
-func temizle ( str: String ) -> String {
+func cleaning ( str: String ) -> String {
     
-    var kelime: ( String ) = ""
-    var dizi: [ Character ] = []
+    var word: ( String ) = ""
+    var array: [ Character ] = []
 
     for i in str {
-        dizi.append(i)
+        array.append(i)
     }
   
-    let leng = dizi.count-1
+    let leng = array.count-1
     var start = 0, stop = leng
   
     while ( start < leng ) {
-        if ( dizi[ start ] == "_" ) {
+        if ( array[ start ] == "_" ) {
             ++start
         }
         else {
@@ -20,7 +20,7 @@ func temizle ( str: String ) -> String {
     }
   
     while ( stop <= leng ) {
-        if ( dizi[ stop ] == "_" ) {
+        if ( array[ stop ] == "_" ) {
             --stop
         }
         else {
@@ -29,20 +29,21 @@ func temizle ( str: String ) -> String {
     }
   
     for ( var i = start ; i <= stop ; ++i) {
-        if( dizi[ i ] == "_") {
-            dizi[ i ] = " "
+        if( array[ i ] == "_") {
+            array[ i ] = " "
         }
     }
   
-    for ( var m = 0 ; m < dizi.count ; ++m ) {
-        kelime = kelime + toString( dizi[ m ] )
+    for ( var m = 0 ; m < array.count ; ++m ) {
+        word = word + toString( array[ m ] )
     }
 
-    return kelime
+    return word
 }
 
-var islem: (String) -> String
-islem = temizle
-let a : (String) = "___foo____bar___"
-var xyz = islem(a)
-print(xyz)
+var result : (String) -> String
+
+result = cleaning
+let str : (String) = "___foo__bu__bar___"
+var cleaned = result(str)
+print(cleaned)
