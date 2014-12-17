@@ -44,6 +44,6 @@ func cleaning ( str: String ) -> String {
 var result : (String) -> String
 
 result = cleaning
-let str : (String) = "___foo____bar___"
+let str : (String) = Process.arguments[1]
 var cleaned = result(str)
 print(cleaned)
